@@ -27,4 +27,4 @@ st.line_chart(rows)
 #st.line_chart(dat['Temperatura'])
 # Print results.
 #for row in rows:
-#   st.dataframe(row
+#   st.dataframe(row)
