@@ -17,10 +17,12 @@ def run_query(query):
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
+data=pd.DataFrame(rows)
 st.title('Test wizualizacji na wbe serwerze')
-st.dataframe(rows)
-st.line_chart(rows)
-
+st.dataframe(data)
+st.line_chart(data['Konduktancja'])
+#st.altair_chart(data['Konduktancja'])
+st.line_chart(dat['Temperatura'])
 # Print results.
 #for row in rows:
-#   st.dataframe(row)
+#   st.dataframe(row
