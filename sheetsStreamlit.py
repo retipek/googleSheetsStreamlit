@@ -20,4 +20,4 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 st.title('Test wizualizacji na wbe serwerze')
 # Print results.
 for row in rows:
-    st.write(f"{row.Konduktancja} xd {row.Temperatura}:")
+    st.dataframe(row)
