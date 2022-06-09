@@ -19,9 +19,9 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 st.title('Test wizualizacji na wbe serwerze')
 st.dataframe(rows)
-st.line_chart(data['Konduktancja'])
+st.line_chart(rows['Konduktancja'])
 #st.altair_chart(data['Konduktancja'])
-st.line_chart(data['Temperatura'])
+st.line_chart(rows['Temperatura'])
 # Print results.
 #for row in rows:
 #   st.dataframe(row)
