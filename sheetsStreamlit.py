@@ -16,15 +16,12 @@ def run_query(query):
 
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
-
-
+rowsData=run_query(f'SELECT * FROM "{sheet_url}" WHERE {"Data=04-06-2022"}')
 st.title('Test wizualizacji na wbe serwerze')
 st.dataframe(rows)
-print(rows)
 st.line_chart(rows)
-#st.line_chart(data['Konduktancja'])
+st.dataframe(rowsData)
 #st.altair_chart(data['Konduktancja'])
-#st.line_chart(dat['Temperatura'])
 # Print results.
 #for row in rows:
 #   st.dataframe(row)
