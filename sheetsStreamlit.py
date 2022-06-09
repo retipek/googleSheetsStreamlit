@@ -17,7 +17,7 @@ def run_query(query):
 tekst="Data=04062022"
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
-rowsData=run_query(f'SELECT * FROM "{sheet_url}" WHERE {tekst}')
+rowsData=run_query(f'SELECT * FROM "{sheet_url}" WHERE "{tekst}"')
 st.title('Test wizualizacji na wbe serwerze')
 st.dataframe(rows)
 st.line_chart(rows)
