@@ -14,7 +14,7 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-tekst="Data=04-06-2022"
+tekst="Data=04062022"
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 rowsData=run_query(f'SELECT * FROM "{sheet_url}" WHERE {tekst}')
