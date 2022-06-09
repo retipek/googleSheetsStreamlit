@@ -17,7 +17,7 @@ def run_query(query):
 tekst="data=gowno"
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
-rowsData=run_query(f'SELECT * FROM "{sheet_url}" WHERE Data="gowno"')
+rowsData=run_query(f'SELECT * FROM "{sheet_url}" WHERE C='gowno'')
 st.title('Test wizualizacji na wbe serwerze')
                    
 st.dataframe(rows)
